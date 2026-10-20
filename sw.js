@@ -1,7 +1,7 @@
 // Guarda o app no celular para abrir mesmo sem internet.
 // Ao publicar uma versão nova, mude o número abaixo para os celulares baixarem a atualização.
-const VERSAO = 'ficha-v1';
-const ARQUIVOS = ['./', './index.html', './config.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+const VERSAO = 'ficha-v2';
+const ARQUIVOS = ['./', './index.html', './app.js', './config.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSAO).then(c => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
